@@ -1,0 +1,98 @@
+<html>
+<style>
+label{
+width: 35%;
+display: inline-block;
+padding-bottom: 3%;
+}
+span{color: rgb(255, 255, 255);
+font-size: 30px;
+font-family: Verdana;
+}
+body
+{
+background-color: black;
+}
+input
+{
+background-color: red;
+color: rgb(255, 255, 255);
+width: 1000px;
+height: 50px;
+font-size: 40px;
+}
+label,legend
+{
+color:rgb(255, 255, 255);
+font-size: 30px;
+font-family: Verdana;
+}
+</style>
+<body>
+<script>
+functioncheck()
+{
+varun=document.getElementById("u_name").value;
+varp=document.getElementById("pwd").value;
+varcp=document.getElementById("c_pwd").value;
+vart1=false,t2=false,t3=false;
+if(un==""|| un==null)
+{
+document.getElementById("uid").innerHTML="User name cannot be empty!";
+t1=false;
+}
+else
+{
+document.getElementById("uid").innerHTML="";
+t1=true;
+}
+if(p==""|| p==null)
+{
+document.getElementById("pid").innerHTML="Password field Cannot be empty";
+t2=false;
+}
+else
+{
+document.getElementById("pid").innerHTML="";
+t2=true;
+}
+if(p!=cp)
+{
+document.getElementById("cpid").innerHTML="The Typed Password Doesnt Match!";
+t3=false;
+}
+else{document.getElementById("cpid").innerHTML="";
+t3=true;
+}
+if(t1&& t2&& t3)
+{
+alert("Sign in successfull");
+}
+}
+</script>
+<form>
+<fieldset>
+<legend>Please Login Through Here</legend>
+<label for="user">
+Enter Your Username: 
+</label>
+<inputtype="text"id="u_name"name="user"placeholder="Username Here"><spanid= "uid">
+</span>
+<br>
+<label for="pass">Enter Your Password: 
+</label>
+<input type="password"name="pass"id="pwd"placeholder="Password Here">
+<spanid="pid">
+</span>
+<br>
+<labelfor="cpass">Confirm Password: </label>
+<input type="password"name="cpass"id="c_pwd"placeholder="Password Again ">
+<spanid="cpid">
+</span>
+<br>
+<input type="button"onclick="check()"value="Click Here To Sign In ">
+</fieldset>
+</form>
+</body>
+</body>
+</html>
